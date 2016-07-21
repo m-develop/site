@@ -1,0 +1,4 @@
+before_deploy:
+options:
+  dist: 'dist'
+  branch: 'master'

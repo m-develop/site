@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link href="{{static_url('guide.css')}}" rel="stylesheet">
+<div class="container" data-type="{{post.meta.type}}" data-template="{{post.meta.template}}">
+  {%- set dir = resource.pages|getGudieDirectory(post) %}
+  {%- set dir["asideType"] = post.meta.asideType %}
+  {%- include "aside.html" with dir%}
+  <div class="docContainer" {{options}}>
+    <div class="title">
+      <h3>{{post.meta.title}}</h3>
+      <div class="select-container hide">
+      </div>
+    </div>
+    <div class="docContent" data="{{post.meta.jsonp}}">
+      {% if {{post.html}} || {{post.meta.jsonp}} %}
+        <div class="content markdown">{{post.html}}</div>
+      {% else %}
+        <img class="placeholder" src="https://os.alipayobjects.com/rmsportal/grkxHlJAMinXddg.png" alt="" />
+      {% endif %}
+      <ul class="docAnchor" style="opacity: 0; height: 0;"></ul>
+      <div class="next_pre"></div>
+    </div>
+  </div>
+</div>
+<script src="{{static_url('guide.js')}}"></script>
+{% include "./footer.html" %}
+{% endblock %}

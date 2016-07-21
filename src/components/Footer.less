@@ -1,0 +1,49 @@
+@pageWidth: 1200px;
+
+.footer {
+  width: 100%;
+  min-width: @pageWidth;
+  height: 82px;
+  background-color: #fff;
+  &-container {
+    position: relative;
+    margin: 0 auto;
+    width: @pageWidth;
+    height: 100%;
+    ul {
+      margin: 0 auto;
+      padding: 30px 0 0 0;
+      width: 412px;
+      height: 18px;
+      overflow: hidden;
+      li {
+        float: left;
+        margin: 0 16px;
+        text-align: center;
+        a {
+          font-weight: 300;
+          font-size: 12px;
+          color: rgb(102, 102, 102);
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .copyright {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: rgb(102, 102, 102);
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: right;
+      .copyright-title {
+        padding: 0 0 0 18px;
+        background: url(https://os.alipayobjects.com/rmsportal/ELdhsLcaVwlEEjA.png) no-repeat center left;
+        background-size: 14px 14px;
+      }
+    }
+  }
+}

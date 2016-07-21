@@ -1,0 +1,16 @@
+<ul class="aside">
+  {%- for list in data %}
+    <li {% if list.children.length %} class="open" {% endif %}>
+      {% if list.url %}
+        <a class="link" href="{{list.url}}">{{list.title}}</a>
+      {% else %}
+        <h4>{{list.title}}<i></i></h4>
+      {% endif %}
+        <div class="" data-length="{{list.children.length}}">
+        {%- for l in list.children %}
+          <a class="child link" href="{{l.url}}" select={{l.option}}>{{l.title}}</a>
+        {%- endfor %}
+        </div>
+    </li>
+  {%- endfor %}
+</ul>

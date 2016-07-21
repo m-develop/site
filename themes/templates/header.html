@@ -1,0 +1,36 @@
+{%- set data = resource.pages|getSearchData() %}
+<script type="text/javascript">
+  window.searchData = {
+    doc: '{{data.data}}',
+    components: '{{data.components}}'
+  }
+</script>
+<div class="header" search-data={{data.data}}>
+  <div class="header-container">
+    <a class="logo" href="/index.html">
+      <i></i>
+      <span>移动前端指引平台</span>
+    </a>
+    <div class="searchInput">
+      <div class="anticon"></div>
+      <input type="text" id="J_search" />
+      <span>搜索...</span>
+      <ul class="search-list hide"></ul>
+    </div>
+    <ul class="menu">
+      <span class="underline"></span>
+      <li data-index="0" data-template="" {% if {{post.meta.template}} === "index" %} class="check" {% endif %}>
+        <a href="/index.html">首页</a>
+      </li>
+      <li data-index="1" data-template="guide" {% if {{post.meta.template}} === "guide" %} class="check" {% endif %}>
+        <a href="/guide/0-introduce.html">开发指引</a>
+      </li>
+      <li data-index="2" data-template="components" {% if {{post.meta.template}} === "components" %} class="check" {% endif %}>
+        <a href="/components/anima-components.html">组件库</a>
+      </li>
+      <li data-index="3" data-template="ui" {% if {{post.meta.template}} === "ui" %} class="check" {% endif %}>
+        <a href="/ui/antd-mobile.html">UI库</a>
+      </li>
+    </ul>
+  </div>
+</div>

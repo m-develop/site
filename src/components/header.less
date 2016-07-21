@@ -1,0 +1,149 @@
+.header {
+  width: 100%;
+  min-width: 1200px;
+  height:64px;
+  background-color: #0099FF;
+
+  &-container {
+    width: 1200px;
+    height: 64px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 210px;
+    height: 32px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 16px;
+    line-height: 32px;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+
+    &.blue-logo {
+      i {
+        content: url("../common/img/blue_logo.png");
+      }
+    }
+
+    i {
+      content: url("../common/img/logo.png");
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      z-index: 100;
+      background-size: 100%;
+    }
+    &::after {
+      content: "";
+      width: 1px;
+      height: 24px;
+      background-color: #fff;
+      position: absolute;
+      right: 0;
+      top: 4px;
+    }
+    span {
+      margin-left: 42px;
+      color: #FFF;
+      position: relative;
+      &:hover{
+        opacity: 0.8;
+      }
+      &::after {
+        font-family: cursive;
+        content: 'beta';
+        position: absolute;
+        font-size: 10px;
+        right: -20px;
+        top: -18px;
+      }
+    }
+  }
+
+  .searchInput {
+    width: 180px;
+    height: 28px;
+    margin-top: 18px;
+    margin-left: 40px;
+    float: left;
+    position: relative;
+
+    .anticon {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      background-image: url("../common/img/search.png");
+      background-size: 100%;
+      left: -22px;
+      top: 6px;
+      z-index: 999;
+    }
+
+    input {
+      width: 160px;
+      height: 28px;
+      display: block;
+      border: 0;
+      background-color: #0099FF;
+      font-size: 14px;
+      color: #fff;
+      line-height: 28px;
+      outline: 1;
+      position: relative;
+      &:focus {
+        outline: 0;
+        border: 0;
+      }
+    }
+
+    span {
+      position: absolute;
+      color: #fff;
+      font-size: 14px;
+      line-height: 28px;
+      top: 0;
+      cursor: initial;
+    }
+  }
+
+  .menu {
+    float: right;
+    margin-right: 25px;
+    position: relative;
+    li {
+      float: left;
+      height: 64px;
+      font-size: 14px;
+      line-height: 64px;
+      color: #fff;
+      padding: 0 20px;
+      cursor: pointer;
+
+      a {
+        color: #fff;
+        display: block;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      &.check {
+        a {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+    .underline {
+      position: absolute;
+      height: 2px;
+      width: 68px;
+      background-color: #fff;
+      bottom: 0;
+      left: 0;
+      display: none;
+      &.move {
+        transition: left .3s cubic-bezier(.075, .82, .165, 1),width 1.5s cubic-bezier(.075, .82, .165, 1);
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.container {
+  padding: 32px 24px;
+  width: 1120px;
+  box-sizing: border-box;
+}
+.channel {
+  margin-top: 60px;
+  h4 {
+    font-size: 16px;
+    color: #404040;
+    text-align: left;
+    font-weight: normal;
+    margin-bottom: 24px;
+  }
+  ul {
+    height: 240px;
+    padding-bottom: 64px;
+    li {
+      width: 240px;
+      height: 240px;
+      float: left;
+      margin-right: 37px;
+      background-size: 100%;
+      background-image: url('../common/img/alipay_icon.png');
+      cursor: pointer;
+      position: relative;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      &.alipay {
+        background-image: url('../common/img/alipay_icon.png');
+      }
+      &.taobao {
+        background-image: url('../common/img/taobao_icon.png');
+      }
+      &.jubao {
+        background-image: url('../common/img/jubao_icon.png');
+      }
+      &.mybank {
+        background-image: url('../common/img/mybank_icon.png');
+      }
+
+      .choose-channel {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(64, 64, 64, .6);
+        border-radius: 6px;
+        opacity: 0;
+        transition-duration: .2s;
+
+        a {
+          display: block;
+          margin: 0 auto;
+          margin-top: 16px;
+          padding: 5px 18px;
+          text-align: center;
+          background-color: transparent;
+          border: 1px solid #fff;
+          font-size: 14px;
+          color: #fff;
+          border-radius: 6px;
+          width: 84px;
+          &:first-child {
+            margin-top: 40px;
+          }
+          &:last-child {
+            width: 130px;
+          }
+          &:hover {
+            border: 1px solid #2DB7F5;
+            color: #2DB7F5;
+          }
+        }
+      }
+
+      &:hover {
+        .choose-channel {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.pattern {
+  border-bottom: 1px solid #E9E9E9;
+  padding-bottom: 60px;
+  li {
+    overflow: hidden;
+    margin-top: 32px;
+    &:first-child {
+      margin-top: 0px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    color: #404040;
+  }
+  h5 {
+    font-size: 16px;
+    color: #404040;
+    margin-top: 24px;
+  }
+  p {
+    font-size: 14px;
+    color: #666;
+    float: left;
+    width: 536px;
+    float: left;
+    margin-top: 14px;
+    line-height: 25px;
+  }
+  div {
+    float: right;
+    width: 430px;
+    height: 200px;
+    background-image: url('https://os.alipayobjects.com/rmsportal/IGBtVxiXQlibSHq.png');
+    background-size: 480px 265px;
+    background-position: center;
+    &.react {
+      background-image: url('https://os.alipayobjects.com/rmsportal/dAuGKUJdhxKTHSZ.png');
+    }
+    &.rn {
+      background-image: url('https://os.alipayobjects.com/rmsportal/wmCZQuwgkXDHQnL.png');
+    }
+  }
+}

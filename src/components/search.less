@@ -1,0 +1,46 @@
+@import '../common/animate.less';
+
+.search-list {
+  width: 170px;
+  max-height: 200px;
+  overflow-y: scroll;
+  position: absolute;
+  outline: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  transition-duration: .3s;
+  z-index: 99;
+
+  .show();
+  .hide();
+
+  li {
+    height: 20px;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    padding: 7px 15px;
+    font-weight: normal;
+    color: #666;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+    z-index: 99;
+    &:hover,
+    &.check {
+      background-color: #eaf8fe;
+    }
+    a {
+      display: block;
+      color: #666;
+    }
+  }
+}

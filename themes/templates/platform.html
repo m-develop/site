@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link href="{{static_url('guide.css')}}" rel="stylesheet">
+<div class="container" data-type="{{post.meta.type}}" data-template="{{post.meta.template}}">
+  {%- set dir = resource.pages|getPlatformDirectory() %}
+  {%- set dir["asideType"] = post.meta.asideType %}
+  {%- include "aside.html" with dir%}
+  <div class="docContainer markdown" {{options}}>
+    <div class="title">
+      <h3>{{post.meta.title}}</h3>
+      <span class="choose"></span>
+      <div class="select-container">
+      </div>
+    </div>
+    <div class="docContent">
+      {{post.html}}
+      <div class="next_pre"></div>
+    </div>
+    <div id="J_antsay"></div>
+  </div>
+</div>
+<script type="text/javascript">
+  new AntSay(document.getElementById('J_antsay'), {
+    appId: 'f9e46b7b-736c-45ba-83ff-8f8a4366dcb7', // 老版本中的commentsId后续版本可能废弃，请尽快改成appId
+    key: '' // 显示指定此评论框的标识（我们推荐总是指定key），如果没有默认使用当前url
+  });
+</script>
+<script src="{{static_url('guide.js')}}"></script>
+{% include "./footer.html" %}
+{% endblock %}

@@ -1,0 +1,101 @@
+.aside {
+  width: 200px;
+  float: left;
+  margin-top: 24px;
+  background-color: #fff;
+  // border-right: 1px solid RGB(233, 233, 233);
+  position: relative;
+  height: 100%;
+
+  li {
+    padding-left: 30px;
+    font-size: 14px;
+    color: #666666;
+    min-height: 40px;
+    line-height: 40px;
+
+    &.open {
+      position: relative;
+      div {
+        height: auto;
+      }
+
+      h4 {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    h4 {
+      position: relative;
+      cursor: pointer;
+      i {
+        background-image: url('../common/img/arrow.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 7px;
+        height: 4px;
+        position: absolute;
+        top: 50%;
+        margin-top: -2px;
+        right: 20px;
+        transform: rotate(0deg);
+        transition: all 0.5s;
+        display: none;
+      }
+      &:hover {
+        color: #999;
+        i {
+          opacity: 0.5;
+          display: block;
+        }
+      }
+    }
+
+    div {
+      overflow: hidden;
+      transition-duration: .3s;
+      position: relative;
+      right: -1px;
+      a {
+        &:hover,
+        &.check {
+          &::after {
+            right: 0;
+          }
+        }
+      }
+    }
+
+    & > a {
+      font-weight: bold;
+    }
+    a {
+      font-size: 14px;
+      color: #666666;
+      min-height: 40px;
+      line-height: 40px;
+      display: block;
+      cursor: pointer;
+      &.child {
+        margin-left: 20px;
+      }
+      &:hover,
+      &.check {
+        color: #2DB7F5;
+        position: relative;
+      }
+      &.check {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 40px;
+          width: 2px;
+          background-color: #2DB7FA;
+          right: -1px;
+        }
+      }
+    }
+  }
+}

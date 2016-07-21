@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+<script type="text/javascript" src="https://os.alipayobjects.com/rmsportal/RxBWLRzUIURhawK.js"></script>
+<link href="{{static_url('components.css')}}" rel="stylesheet">
+<div class="container" data-type="{{post.meta.type}}" data-template="{{post.meta.template}}">
+  {%- set dir = resource.pages|getComponentsDirectory(post) %}
+  {%- include "aside.html" with dir %}
+  <div class="componentsContainer" data-title="{{post.title}}" data={{dir.components}}>
+    <div class="title">
+      <h3>{{post.meta.title}}</h3>
+    </div>
+    <ul>
+    </ul>
+  </div>
+</div>
+<script src="{{static_url('components.js')}}"></script>
+{% include "./footer.html" %}
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link href="{{static_url('chooseChannel.css')}}" rel="stylesheet">
+<div class="container" data-template="guide">
+  <div class="pattern">
+    <h3>模式介绍</h3>
+    <ul>
+      <li>
+        <p style="float:none;width:auto;">
+          本页将会指引你选择适合自己当前产品的开发模式，从而为你提供个性化的指引文档。建议你认真了解下面 3 种开发模式，他们对应了 3 种不同的产品类型。在本页最后，会让你针对自己的需求做出选择。
+        </p>
+      </li>
+      <li>
+        <h5>标准 H5 产品模式 (Anima)</h5>
+        <p>
+          这是目前最流行的开发方式，技术栈主要以 HTML5 相关体系为主，Anima 以及 AntUI 组件库正是基于此设计，保证流畅的体验和极致的性能，通过与容器 Hybrid 的结合，能够满足至少 95% 以上的业务需求。是目前蚂蚁业务中，对 C 类产品最常见最成熟的开发方案。
+        </p>
+        <div></div>
+      </li>
+      <li>
+        <h5>B 类产品模式 (React)</h5>
+        <p>
+          随着移动设备的普及，很多面向商家或小二的中后台产品也出现在移动端。针对这类对 B 的产品，我们推荐使用基于 ReactJS 的 antd mobile 作为首选 UI 组件库。这种方案的最主要优点是强规范、高约束、使用简单方便，非常适合移动版中后台开发的前端以及全栈开发人员。
+        </p>
+        <div class="react"></div>
+      </li>
+      <li>
+        <h5>复杂交互类产品模式 (React Native)</h5>
+        <p>
+          受硬件性能和 Device API 的限制，很多情况下，H5 无法实现和发挥系统级的体验和性能（如下拉刷新、局部滚动等场景）。因此，在这种情况下，我们建议通过 React Native 组件库方案来补充和增强 H5 的能力，让前端的产品表现与 Native 体验毫无二致。
+        </p>
+        <div class="rn"></div>
+      </li>
+    </ul>
+  </div>
+  <div class="channel">
+    <h4>请选择部署渠道，以及开发模式：</h4>
+    <ul>
+      <li class="alipay">
+        <div class="choose-channel">
+          <a data="aliapy-h5">标准H5</a>
+          <a data="aliapy-react">B类产品</a>
+          <a data="aliapy-rn">复杂交互类产品</a>
+        </div>
+      </li>
+      <li class="taobao">
+        <div class="choose-channel">
+          <a data="taobao-h5">标准H5</a>
+          <a data="taobao-react">B类产品</a>
+          <a data="taobao-rn">复杂交互类产品</a>
+        </div>
+      </li>
+      <li class="mybank">
+        <div class="choose-channel">
+          <a data="mybank-h5">标准H5</a>
+          <a data="mybank-react">B类产品</a>
+          <a data="mybank-rn">复杂交互类产品</a>
+        </div>
+      </li>
+      <li class="jubao">
+        <div class="choose-channel">
+          <a data="jubao-h5">标准H5</a>
+          <a data="jubao-react">B类产品</a>
+          <a data="jubao-rn">复杂交互类产品</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<script src="{{static_url('chooseChannel.js')}}"></script>
+{% include "./footer.html" %}
+{% endblock %}

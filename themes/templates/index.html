@@ -1,0 +1,121 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link href="{{static_url('index.css')}}" rel="stylesheet">
+<script src="https://os.alipayobjects.com/rmsportal/uodsxlnZeOYhflf.js"></script>
+<script src="https://os.alipayobjects.com/rmsportal/THCSZTWfjDIOluw.js"></script>
+<script src="https://os.alipayobjects.com/rmsportal/RSBRzAnSfinqvmt.js"></script>
+<div class="banner">
+  <div id ='animation'>
+    <canvas id="canvas"></canvas>
+  </div>
+  <div class="banner-container">
+    <h1>USE YOUR ILLUSION</h1>
+    <h2>运用你的想象力，构建优秀的移动产品</h2>
+    <a class="start" id="start" href="/guide/0-introduce.html">Start</a>
+  </div>
+</div>
+<div class="intro">
+  <div class="intro-container">
+    <div class="central-axis">
+      <div class="timer-pointer"></div>
+      <div class="timer-pointer"></div>
+      <div class="timer-pointer"></div>
+      <div class="timer-pointer"></div>
+    </div>
+    <ul class="intro-list">
+      <li class="intro-item" id="page1">
+        <div class="intro-txt intro-left-text" type="left">
+          <h5 class="intro-txt-title">强大 | Strong</h5>
+          <p class="intro-txt-cnt">所有产出基于业务最佳实践，提供多类型脚手架支持，强大而高效</p>
+        </div>
+        <div class="intro-pic intro-right-pic" type="right"></div>
+      </li>
+      <li class="intro-item" id="page2">
+        <div class="intro-pic intro-left-pic" type="left"></div>
+        <div class="intro-txt intro-right-text" type="right">
+          <h5 class="intro-txt-title">Resourceful | 丰富</h5>
+          <p class="intro-txt-cnt">丰富、灵活、实用的基础组件，为业务产品提供强有力的支持</p>
+        </div>
+      </li>
+      <li class="intro-item" id="page3">
+        <div class="intro-txt intro-left-text" type="left">
+          <h5 class="intro-txt-title">开放 | Open</h5>
+          <p class="intro-txt-cnt">完全基于 webpack、npm 等来自社区的开放性技术方案，背后具备成熟的生态力量</p>
+        </div>
+        <div class="intro-pic intro-right-pic" type="right"></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="guide">
+  <div class="guide-container">
+    <h3>极简上手</h3>
+    <div class="step-btn-list">
+      <div class="step-btn-item ready"><a class="step-btn-icon">1</a><p class="step-btn-title">安装环境</p></div>
+      <div class="step-btn-item"><a class="step-btn-icon">2</a><p class="step-btn-title">初始化脚手架</p></div>
+      <div class="step-btn-item"><a class="step-btn-icon">3</a><p class="step-btn-title">简单配置</p></div>
+      <div class="step-btn-item"><a class="step-btn-icon">4</a><p class="step-btn-title">开发调试</p></div>
+      <p class="step-line"><i></i></p>
+      <p class="step-line"><i></i></p>
+      <p class="step-line"><i></i></p>
+    </div>
+    <ul class="step-surface-wrap">
+      <li class="step-surface-item active">
+        <h4>安装环境</h4>
+        <a class="download" href="https://nodejs.org/en/download/" target="_blank">安装 Node.js</a>
+        <p>安装 cnpm: npm install -g cnpm --registry=https://registry.npm.taobao.org
+</a></p>
+        <div class="code-wrap">
+          <div class="code-content">
+            <img src="https://zos.alipayobjects.com/rmsportal/jXWNdrfoCktmkQB.png" style="width: 448px; height: 143px;" alt="image">
+          </div>
+        </div>
+      </li>
+      <li class="step-surface-item">
+        <h4>初始化脚手架</h4>
+        <p>导航到你的开发目录后 git clone git@github.com:m-develop/boilerplate.git </p>
+        <div class="code-wrap">
+          <div class="code-content">
+            <img src="https://zos.alipayobjects.com/rmsportal/YfKUtItPvVBOqNi.png" style="width: 100%" alt="image">
+          </div>
+        </div>
+      </li>
+      <li class="step-surface-item">
+        <h4>简单配置</h4>
+        <p>将目录名改为你的项目名，并将 package.json 中的 name 改为你的项目名</p>
+        <div class="code-wrap">
+          <div class="code-content">
+            <img src="https://zos.alipayobjects.com/rmsportal/XRkIxkxQBUWvKyX.png" style="width: 100%" alt="image">
+          </div>
+        </div>
+      </li>
+      <li class="step-surface-item">
+        <h4>开发调试</h4>
+        <p>运行 cnpm install，安装需要的依赖</p>
+        <p>完成安装后，运行 cnpm start ，开启本地服务，通过浏览器访问  <a href="http://127.0.0.1:8001" target="_blank">http://127.0.0.1:8001</a></p>
+        <div class="code-wrap">
+          <div class="code-content">
+            <img src="https://zos.alipayobjects.com/rmsportal/TImvTusuezawBWv.png" style="width: 100%" alt="image">
+          </div>
+        </div>
+      </li>
+    </ul>
+    <p class="step-pagination"><a class="step-page-next">下一步</a><a class="step-page-prev disabled">上一步</a></p>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-container">
+    <ul class="">
+      <li><a href="https://github.com/m-develop/" target="_blank">Github 仓库</a></li>
+      <li><a href="https://github.com/m-develop/site/issues/2" target="_blank">经典案例</a></li>
+      <li><a href="https://github.com/m-develop/site/issues/new" target="_blank">反馈和意见</a></li>
+      <li><a href="https://github.com/m-develop/site/issues/1" target="_blank">联系我们</a></li>
+    </ul>
+    <div class="copyright">
+      <p class="copyright-title">2016 蚂蚁金服-体验技术部 出品</p>
+      <p class="copyright-content">文档版本：0.8.0</p>
+    </div>
+  </div>
+</div>
+<script src="{{static_url('index.js')}}"></script>
+{% endblock %}

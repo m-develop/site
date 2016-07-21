@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link href="{{static_url('guide.css')}}" rel="stylesheet">
+<div class="container" data-type="{{post.meta.type}}" data-template="{{post.meta.template}}">
+  {%- set dir = resource.pages|getToolDirectory() %}
+  {%- set dir["asideType"] = post.meta.asideType %}
+  {%- include "aside.html" with dir%}
+  <div class="docContainer markdown" {{options}}>
+    <div class="title">
+      <h3>{{post.meta.title}}</h3>
+      <span class="choose"></span>
+      <div class="select-container">
+      </div>
+    </div>
+    <div class="docContent">
+      {{post.html}}
+    </div>
+  </div>
+</div>
+<script src="{{static_url('guide.js')}}"></script>
+{% include "./footer.html" %}
+{% endblock %}
