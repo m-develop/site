@@ -55,7 +55,7 @@
   <script src="common.js"></script>
   <script>!function(e){function t(n){if(i[n])return i[n].exports;var r=i[n]={exports:{},id:n,loaded:!1};return e[n].call(r.exports,r,r.exports,t),r.loaded=!0,r.exports}var i={};return t.m=e,t.c=i,t.p="",t(0)}([function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i=window;t["default"]=i.vl=function(e,t){var n=e||100,r=t||750,a=i.document,d=navigator.userAgent,o=d.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),l=d.match(/U3\/((\d+|\.){5,})/i),s=l&&parseInt(l[1].split(".").join(""),10)>=80,u=a.documentElement,c=1;if(o&&o[1]>534||s){u.style.fontSize=n+"px";var p=a.createElement("div");p.setAttribute("style","width: 1rem;display:none"),u.appendChild(p);var m=i.getComputedStyle(p).width;if(u.removeChild(p),m!==u.style.fontSize){var v=parseInt(m,10);c=100/v}}var f=a.querySelector('meta[name="viewport"]');f||(f=a.createElement("meta"),f.setAttribute("name","viewport"),a.head.appendChild(f)),f.setAttribute("content","width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1");var h=function(){u.style.fontSize=n/r*u.clientWidth*c+"px"};h(),i.addEventListener("resize",h)},e.exports=t["default"]}]);
   vl(100, 750);</script>
-  <link rel="stylesheet" href="https://as.alipayobjects.com/g/h5-lib/antui/9.9.0-1/rem/amui.css"/>
+  <link rel="stylesheet" href="https://os.alipayobjects.com/rmsportal/YJHOBQTADnUotqX.css"/>
   <link rel="stylesheet" href="common.css"/>
   <link rel="stylesheet" href="./index.css"/>
   <script type="text/javascript" src="https://a.alipayobjects.com/publichome-static/antBridge/antBridge.min.js"></script>
@@ -98,39 +98,39 @@ page.init();
 
 #### 使用、搜索组件
 
-在实际业务中，肯定需要使用各种各样的组件，来完成工作。我们提供了轻盈、简单、易用的组件库`anima`和基于支付宝APP视觉交互规范[AMUI](https://doc.open.alipay.com/doc2/detail.htm?treeId=128&articleId=104330&docType=1)的UI库`antd-mobile`.
+在实际业务中，肯定需要使用各种各样的组件，来完成工作。我们提供了轻盈、简单、易用的组件库`anima`和基于支付宝APP视觉交互规范[AMUI](https://doc.open.alipay.com/doc2/detail.htm?treeId=128&articleId=104330&docType=1)的UI库`antd-mobile-h5`.
 
-> 在开始使用`antd-mobile`前需安装`npm`，了解蚂蚁金服新一代构建和调试工具[atool](http://ant-tool.github.io/index.html)，以及[移动高清方案](/solution/hd.html)
+> 在开始使用`antd-mobile-h5`前需安装`npm`，了解蚂蚁金服新一代构建和调试工具[atool](http://ant-tool.github.io/index.html)，以及[移动高清方案](/solution/hd.html)
 
 #### 使用antd-mobile
 
 第一步: 安装
 
 ```bash
-$ npm install antui-h5 --save
+$ npm install antd-mobile-h5 --save
 ```
 
 第二步: 使用组件
 
 -	对于单个页面的业务推荐如下使用,组件默认包含样式
 
-```js
-var Dialog = require ('antui-h5/dialog');
+```js 
+var Dialog = require('antd-mobile-h5/components/dialog');
 var dialog = new Dialog({
-    content : '辅助说明文字辅助说明文字辅助说明文字辅助说明文字',
-    title : '标题文字',
-    mask: true,
-    effect: 'none'
-});
+            content : '辅助说明文字辅助说明文字辅助说明文字辅助说明文字',
+            title : '标题文字',
+            mask: true
+        });
+ dialog.show(); 
 ```
 
 -	对于项目级别的业务,我们建议你在页面直接引入`AMUI`基础样式文件.
 
 ```html
-<link rel="stylesheet" href="https://as.alipayobjects.com/g/h5-lib/antui/9.9.0-1/rem/amui.css"/>
+<link rel="stylesheet" href="https://os.alipayobjects.com/rmsportal/YJHOBQTADnUotqX.css"/>
 ```
 
-想了解更多`antd-mobile`的信息可以查看[相关示例](), 阅读[UI库介绍](/ui/antd-mobile.html)文档.
+想了解更多`antd-mobile`的信息可以查看[相关示例](https://m-develop.github.io/antd-mobile-h5/), 阅读[UI库介绍](/ui/antd-mobile.html)文档.
 
 #### 使用anima功能组件
 
