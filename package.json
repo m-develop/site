@@ -16,7 +16,8 @@
     "build": "npm run clean && nico build && webpack -p",
     "build:tag": "export NODE_ENV=tag && npm run build",
     "start": "npm run clean && export NODE_ENV=dev && concurrent -r 'webpack -w' 'nico server --watch --port 4000'",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "publish": "npm run build && node publish.js"
   },
   "author": "",
   "license": "MIT",
