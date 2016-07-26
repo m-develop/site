@@ -138,7 +138,7 @@ const DocContainer = {
     const data = $('.docContent').attr('data');
     if (!data || !data.length) return;
     $.ajax({
-      url: 'http://registry.npm.taobao.org/' + data,
+      url: '//registry.npm.taobao.org/' + data,
       dataType: 'jsonp',
       success(res) {
         let html = getMarkdowm(res.readme);
